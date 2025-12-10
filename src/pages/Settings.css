@@ -1,0 +1,110 @@
+.settings-page {
+    padding: var(--spacing-2xl) 0;
+    min-height: 100vh;
+}
+
+.settings-header {
+    margin-bottom: var(--spacing-2xl);
+    animation: slideDown 0.6s ease-out;
+}
+
+.settings-header h1 {
+    margin-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.settings-subtitle {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-lg);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    transition: all var(--transition-base);
+}
+
+.back-link:hover {
+    color: var(--color-accent);
+    transform: translateX(-4px);
+}
+
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.settings-section {
+    padding: var(--spacing-xl);
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-xl);
+    animation: slideUp 0.6s ease-out;
+}
+
+.settings-section h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-divider);
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg);
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-md);
+    transition: all var(--transition-base);
+}
+
+.setting-item:last-child {
+    margin-bottom: 0;
+}
+
+.setting-item:hover {
+    background: rgba(106, 30, 85, 0.1);
+}
+
+.setting-info {
+    flex: 1;
+}
+
+.setting-label {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.setting-value {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+}
+
+.setting-description {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-tertiary);
+    margin-top: var(--spacing-xs);
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .setting-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+
+    .setting-item button {
+        width: 100%;
+    }
+}
